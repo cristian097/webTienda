@@ -1,0 +1,65 @@
+:root {
+    --azul-principal: #3D586A;
+    --azul-oscuro: #363B3F;
+    --azul-profundo: #25292C;
+    --azul-claro: #dadada;
+    --azul-hover: #767A7D;
+
+    --blanco: #FFFFFF;
+    --gris-fondo: #f7f8f8;
+    --gris-borde: #D9E2F0;
+    --gris-texto: #5F6B7A;
+    --texto: #181C1F;
+
+    --verde-whatsapp: #25D366;
+
+    font-family:
+        Inter,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    margin: 0;
+    background: var(--gris-fondo);
+    color: var(--texto);
+}
+
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+
+button {
+    cursor: pointer;
+}
+
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+img {
+    max-width: 100%;
+    display: block;
+}

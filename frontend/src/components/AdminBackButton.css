@@ -1,0 +1,65 @@
+
+/* Contenedor del botón de regreso */
+.admin-back-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto 20px;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+/* Botón */
+.admin-back-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    min-height: 44px;
+    padding: 11px 18px;
+
+    background: var(--azul-profundo, #123b70);
+    color: #ffffff;
+    border: 1px solid transparent;
+    border-radius: 9px;
+
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.admin-back-button:hover {
+    background: var(--azul-hover, #0b2c56);
+    transform: translateY(-1px);
+}
+
+.admin-back-button:focus-visible {
+    outline: 3px solid #80b7ff;
+    outline-offset: 3px;
+}
+
+.admin-back-button span:first-child {
+    font-size: 1.3rem;
+    line-height: 1;
+}
+
+/* Adaptación para celulares */
+@media (max-width: 768px) {
+    .admin-back-container {
+        padding: 0 12px;
+        margin-bottom: 16px;
+    }
+
+    .admin-back-button {
+        display: flex;
+        width: 100%;
+        min-height: 46px;
+        padding: 12px;
+        font-size: 0.92rem;
+        text-align: center;
+    }
+}

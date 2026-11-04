@@ -1,0 +1,421 @@
+/* ================================
+   EMPRESA
+================================ */
+
+.company-page {
+    overflow: hidden;
+}
+
+/* ================================
+   HERO
+================================ */
+
+.company-hero {
+    position: relative;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--azul-profundo),
+            var(--azul-oscuro)
+        );
+
+    color: var(--blanco);
+}
+
+.company-hero::after {
+    content: "";
+
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    right: -80px;
+    top: -100px;
+
+    border: 60px solid rgba(255, 255, 255, 0.05);
+
+    border-radius: 50%;
+}
+
+.company-hero-content {
+    position: relative;
+    z-index: 1;
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 80px 20px;
+}
+
+.company-hero-content > span {
+    display: inline-block;
+
+    margin-bottom: 15px;
+
+    color: rgba(255, 255, 255, 0.7);
+
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.company-hero h1 {
+    margin: 0 0 15px;
+
+    font-size: 3.2rem;
+    line-height: 1.1;
+}
+
+.company-hero p {
+    max-width: 650px;
+
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.78);
+
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+/* ================================
+   QUIÉNES SOMOS
+================================ */
+
+.company-about {
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 80px 20px;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(350px, 0.8fr);
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+.company-section-label {
+    color: var(--azul-principal);
+
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.company-about-content h2 {
+    margin: 12px 0 20px;
+
+    color: var(--azul-profundo);
+
+    font-size: 2.3rem;
+    line-height: 1.2;
+}
+
+.company-about-content p {
+    margin: 0 0 15px;
+
+    color: var(--gris-texto);
+
+    line-height: 1.7;
+}
+
+.company-about-placeholder {
+    min-height: 360px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--azul-claro),
+            #ffffff
+        );
+
+    border: 1px solid var(--gris-borde);
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 12px 35px rgba(8, 59, 138, 0.08);
+}
+
+.company-about-placeholder > div {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: var(--azul-principal);
+
+    text-align: center;
+}
+
+.company-about-placeholder span {
+    font-size: 0.85rem;
+}
+
+.company-about-placeholder strong {
+    font-size: 1.3rem;
+}
+
+/* ================================
+   SECCIONES
+================================ */
+
+.company-purpose,
+.company-values {
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 30px 20px 80px;
+}
+
+.company-values {
+    padding-top: 30px;
+}
+
+.company-section-title {
+    max-width: 700px;
+
+    margin-bottom: 40px;
+}
+
+.company-section-title > span {
+    color: var(--azul-principal);
+
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.company-section-title h2 {
+    margin: 10px 0 12px;
+
+    color: var(--azul-profundo);
+
+    font-size: 2.2rem;
+}
+
+.company-section-title p {
+    margin: 0;
+
+    color: var(--gris-texto);
+
+    line-height: 1.7;
+}
+
+/* ================================
+   MISIÓN / VISIÓN
+================================ */
+
+.company-purpose-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 22px;
+}
+
+.company-purpose-card {
+    position: relative;
+
+    padding: 32px;
+
+    background: var(--blanco);
+
+    border: 1px solid var(--gris-borde);
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 6px 20px rgba(8, 59, 138, 0.06);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.company-purpose-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 4px;
+
+    background: var(--azul-principal);
+}
+
+.company-purpose-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 12px 28px rgba(8, 59, 138, 0.11);
+}
+
+.company-card-icon {
+    width: 46px;
+    height: 46px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 18px;
+
+    background: var(--azul-claro);
+    color: var(--azul-principal);
+
+    border-radius: 11px;
+
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+
+.company-purpose-card h3,
+.company-value-card h3 {
+    margin: 0 0 10px;
+
+    color: var(--azul-oscuro);
+
+    font-size: 1.25rem;
+}
+
+.company-purpose-card p,
+.company-value-card p {
+    margin: 0;
+
+    color: var(--gris-texto);
+
+    line-height: 1.65;
+}
+
+/* ================================
+   VALORES
+================================ */
+
+.company-values-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 18px;
+}
+
+.company-value-card {
+    padding: 25px;
+
+    background: var(--blanco);
+
+    border: 1px solid var(--gris-borde);
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 5px 17px rgba(8, 59, 138, 0.05);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.company-value-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 10px 24px rgba(8, 59, 138, 0.09);
+}
+
+.company-value-card .company-card-icon {
+    width: 40px;
+    height: 40px;
+
+    margin-bottom: 15px;
+
+    font-size: 1rem;
+}
+
+/* ================================
+   TABLET
+================================ */
+
+@media (max-width: 900px) {
+
+    .company-about {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+    .company-values-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+/* ================================
+   CELULAR
+================================ */
+
+@media (max-width: 600px) {
+
+    .company-hero-content {
+        padding: 55px 16px;
+    }
+
+    .company-hero h1 {
+        font-size: 2.4rem;
+    }
+
+    .company-about,
+    .company-purpose,
+    .company-values {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .company-about {
+        padding-top: 55px;
+        padding-bottom: 55px;
+    }
+
+    .company-about-content h2 {
+        font-size: 1.9rem;
+    }
+
+    .company-purpose,
+    .company-values {
+        padding-bottom: 55px;
+    }
+
+    .company-purpose-grid,
+    .company-values-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .company-about-placeholder {
+        min-height: 280px;
+    }
+
+}

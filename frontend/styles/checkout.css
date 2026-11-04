@@ -1,0 +1,451 @@
+.checkout-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 20px 70px;
+}
+
+/* ================================
+   ENCABEZADO
+================================ */
+
+.checkout-header {
+    margin-bottom: 35px;
+}
+
+.checkout-header h1 {
+    margin: 0 0 8px;
+
+    color: var(--azul-profundo);
+
+    font-size: 2.4rem;
+    font-weight: 800;
+}
+
+.checkout-header p {
+    margin: 0;
+
+    color: var(--gris-texto);
+}
+
+/* ================================
+   LAYOUT
+================================ */
+
+.checkout-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 380px;
+    gap: 28px;
+
+    align-items: start;
+}
+
+/* ================================
+   TARJETAS
+================================ */
+
+.checkout-form-card,
+.checkout-summary {
+    background: var(--blanco);
+
+    border: 1px solid var(--gris-borde);
+    border-radius: 16px;
+
+    box-shadow: 0 7px 25px rgba(8, 59, 138, 0.07);
+}
+
+.checkout-form-card {
+    padding: 30px;
+}
+
+.checkout-summary {
+    position: sticky;
+    top: 95px;
+
+    padding: 25px;
+}
+
+/* ================================
+   CABECERA DE SECCIÓN
+================================ */
+
+.checkout-section-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+
+    margin-bottom: 28px;
+}
+
+.checkout-section-icon {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    background: var(--azul-claro);
+
+    border-radius: 10px;
+
+    font-size: 1.2rem;
+}
+
+.checkout-section-header h2 {
+    margin: 0 0 5px;
+
+    color: var(--azul-oscuro);
+
+    font-size: 1.3rem;
+}
+
+.checkout-section-header p {
+    margin: 0;
+
+    color: var(--gris-texto);
+
+    font-size: 0.88rem;
+}
+
+/* ================================
+   FORMULARIO
+================================ */
+
+.checkout-form-group {
+    margin-bottom: 20px;
+}
+
+.checkout-form-group label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: var(--texto);
+
+    font-size: 0.92rem;
+    font-weight: 700;
+}
+
+.checkout-form-group input,
+.checkout-form-group textarea {
+    width: 100%;
+
+    padding: 12px 14px;
+
+    background: var(--blanco);
+    color: var(--texto);
+
+    border: 1px solid var(--gris-borde);
+    border-radius: 9px;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.checkout-form-group input {
+    height: 45px;
+}
+
+.checkout-form-group textarea {
+    min-height: 110px;
+
+    resize: vertical;
+}
+
+.checkout-form-group input::placeholder,
+.checkout-form-group textarea::placeholder {
+    color: #9AA5B5;
+}
+
+.checkout-form-group input:focus,
+.checkout-form-group textarea:focus {
+    border-color: var(--azul-principal);
+
+    box-shadow:
+        0 0 0 3px rgba(11, 94, 215, 0.12);
+}
+
+/* ================================
+   CHECKBOX
+================================ */
+
+.checkout-checkbox {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+
+    margin: 25px 0;
+
+    color: var(--gris-texto);
+
+    font-size: 0.88rem;
+    line-height: 1.5;
+
+    cursor: pointer;
+}
+
+.checkout-checkbox input {
+    width: 17px;
+    height: 17px;
+
+    margin-top: 2px;
+
+    accent-color: var(--azul-principal);
+
+    cursor: pointer;
+}
+
+/* ================================
+   BOTÓN WHATSAPP
+================================ */
+
+.checkout-submit-button {
+    width: 100%;
+
+    padding: 14px 20px;
+
+    border: none;
+    border-radius: 9px;
+
+    background: var(--verde-whatsapp);
+    color: var(--blanco);
+
+    font-weight: 800;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.checkout-submit-button:hover {
+    background: #1fba59;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 7px 17px rgba(37, 211, 102, 0.25);
+}
+
+/* ================================
+   PRODUCTOS
+================================ */
+
+.checkout-products {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.checkout-product {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+
+    padding-bottom: 15px;
+
+    border-bottom: 1px solid #EEF2F7;
+}
+
+.checkout-product:last-child {
+    padding-bottom: 0;
+
+    border-bottom: none;
+}
+
+.checkout-product-info {
+    min-width: 0;
+}
+
+.checkout-product h3 {
+    margin: 0 0 5px;
+
+    color: var(--texto);
+
+    font-size: 0.95rem;
+}
+
+.checkout-product p {
+    margin: 0;
+
+    color: var(--gris-texto);
+
+    font-size: 0.82rem;
+}
+
+.checkout-product strong {
+    color: var(--azul-principal);
+
+    font-size: 0.95rem;
+
+    white-space: nowrap;
+}
+
+/* ================================
+   TOTAL
+================================ */
+
+.checkout-summary-divider {
+    height: 1px;
+
+    margin: 22px 0;
+
+    background: var(--gris-borde);
+}
+
+.checkout-total {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 22px;
+}
+
+.checkout-total span {
+    color: var(--texto);
+
+    font-size: 1.05rem;
+    font-weight: 700;
+}
+
+.checkout-total strong {
+    color: var(--azul-principal);
+
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+/* ================================
+   VOLVER
+================================ */
+
+.checkout-back-cart {
+    display: block;
+
+    padding: 11px;
+
+    color: var(--azul-principal);
+
+    border: 1px solid var(--gris-borde);
+    border-radius: 9px;
+
+    text-align: center;
+
+    font-weight: 600;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.checkout-back-cart:hover {
+    background: var(--azul-claro);
+
+    border-color: var(--azul-principal);
+}
+
+/* ================================
+   CARRITO VACÍO
+================================ */
+
+.checkout-empty {
+    max-width: 600px;
+
+    margin: 60px auto;
+    padding: 55px 30px;
+
+    background: var(--blanco);
+
+    border: 1px solid var(--gris-borde);
+    border-radius: 18px;
+
+    text-align: center;
+
+    box-shadow: 0 8px 25px rgba(8, 59, 138, 0.07);
+}
+
+.checkout-empty-icon {
+    margin-bottom: 15px;
+
+    font-size: 4rem;
+}
+
+.checkout-empty h1 {
+    margin: 0 0 10px;
+
+    color: var(--azul-profundo);
+}
+
+.checkout-empty p {
+    margin: 0 0 28px;
+
+    color: var(--gris-texto);
+}
+
+.checkout-primary-button {
+    display: inline-block;
+
+    padding: 13px 22px;
+
+    background: var(--azul-principal);
+    color: var(--blanco);
+
+    border-radius: 9px;
+
+    font-weight: 700;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.checkout-primary-button:hover {
+    background: var(--azul-hover);
+
+    transform: translateY(-1px);
+}
+
+/* ================================
+   TABLET
+================================ */
+
+@media (max-width: 850px) {
+
+    .checkout-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .checkout-summary {
+        position: static;
+    }
+}
+
+/* ================================
+   CELULAR
+================================ */
+
+@media (max-width: 600px) {
+
+    .checkout-page {
+        padding: 35px 16px 50px;
+    }
+
+    .checkout-header h1 {
+        font-size: 2rem;
+    }
+
+    .checkout-form-card,
+    .checkout-summary {
+        padding: 22px;
+    }
+
+    .checkout-product strong {
+        font-size: 0.9rem;
+    }
+}

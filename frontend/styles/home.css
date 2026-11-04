@@ -1,0 +1,531 @@
+/* ================================
+   HOME
+================================ */
+
+.home-page {
+    overflow: hidden;
+}
+
+/* ================================
+   HERO
+================================ */
+
+.home-hero {
+    position: relative;
+
+    min-height: 580px;
+
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+
+    align-items: center;
+
+    max-width: 1200px;
+    margin: 0 auto;
+
+    padding: 70px 20px;
+}
+
+.home-hero-content {
+    position: relative;
+    z-index: 2;
+
+    max-width: 650px;
+}
+
+.home-hero-label {
+    display: inline-block;
+
+    margin-bottom: 18px;
+    padding: 7px 13px;
+
+    background: var(--azul-claro);
+    color: var(--azul-principal);
+
+    border-radius: 20px;
+
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.home-hero h1 {
+    margin: 0 0 22px;
+
+    color: var(--azul-profundo);
+
+    font-size: clamp(2.8rem, 5vw, 4.5rem);
+    line-height: 1.05;
+    letter-spacing: -2px;
+}
+
+.home-hero h1 span {
+    color: var(--azul-principal);
+}
+
+.home-hero p {
+    max-width: 570px;
+
+    margin: 0 0 32px;
+
+    color: var(--gris-texto);
+
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+/* ================================
+   HERO BOTONES
+================================ */
+
+.home-hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.home-primary-button,
+.home-secondary-button,
+.home-cta-button {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 13px 21px;
+
+    border-radius: 9px;
+
+    font-weight: 700;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.home-primary-button {
+    background: var(--azul-principal);
+    color: var(--blanco);
+}
+
+.home-primary-button:hover {
+    background: var(--azul-hover);
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 18px rgba(202, 202, 202, 0.25);
+}
+
+.home-secondary-button {
+    background: var(--blanco);
+    color: var(--azul-principal);
+
+    border: 1px solid var(--gris-borde);
+}
+
+.home-secondary-button:hover {
+    background: var(--azul-claro);
+
+    border-color: var(--azul-principal);
+
+    transform: translateY(-2px);
+}
+
+/* ================================
+   HERO DECORACIÓN
+================================ */
+
+.home-hero-decoration {
+    position: relative;
+
+    min-height: 430px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-circle {
+    position: absolute;
+
+    border-radius: 50%;
+}
+
+.hero-circle-one {
+    width: 380px;
+    height: 380px;
+
+    background: var(--azul-claro);
+
+    right: 20px;
+}
+
+.hero-circle-two {
+    width: 280px;
+    height: 280px;
+
+    border: 30px solid rgba(11, 94, 215, 0.08);
+
+    right: 70px;
+}
+
+.hero-product-placeholder {
+    position: relative;
+    z-index: 2;
+
+    width: 270px;
+    height: 320px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--blanco);
+
+    border: 1px solid var(--gris-borde);
+    border-radius: 22px;
+
+    box-shadow:
+        0 20px 50px rgba(8, 59, 138, 0.15);
+
+    color: var(--azul-principal);
+
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+/* ================================
+   SECCIONES
+================================ */
+
+.home-about,
+.home-featured {
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 80px 20px;
+}
+
+.home-section-title {
+    max-width: 700px;
+
+    margin-bottom: 45px;
+}
+
+.home-section-title > span {
+    color: var(--azul-principal);
+
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.home-section-title h2 {
+    margin: 10px 0 14px;
+
+    color: var(--azul-profundo);
+
+    font-size: 2.3rem;
+    line-height: 1.2;
+}
+
+.home-section-title p {
+    margin: 0;
+
+    color: var(--gris-texto);
+
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+/* ================================
+   TARJETAS INFORMACIÓN
+================================ */
+
+.home-about-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 22px;
+}
+
+.home-info-card {
+    padding: 28px;
+
+    background: var(--blanco);
+
+    border: 1px solid var(--gris-borde);
+    border-radius: 16px;
+
+    box-shadow:
+        0 6px 20px rgba(8, 59, 138, 0.06);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.home-info-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 12px 28px rgba(8, 59, 138, 0.11);
+}
+
+.home-info-icon {
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 18px;
+
+    background: var(--azul-claro);
+    color: var(--azul-principal);
+
+    border-radius: 11px;
+
+    font-size: 1.3rem;
+    font-weight: 800;
+}
+
+.home-info-card h3 {
+    margin: 0 0 9px;
+
+    color: var(--azul-oscuro);
+
+    font-size: 1.15rem;
+}
+
+.home-info-card p {
+    margin: 0;
+
+    color: var(--gris-texto);
+
+    line-height: 1.6;
+}
+
+/* ================================
+   PRODUCTOS DESTACADOS
+================================ */
+
+.home-featured {
+    padding-top: 50px;
+}
+
+.home-featured-placeholder {
+    padding: 55px 30px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--azul-claro),
+            var(--blanco)
+        );
+
+    border: 1px solid var(--gris-borde);
+    border-radius: 18px;
+
+    text-align: center;
+}
+
+.featured-placeholder-icon {
+    margin-bottom: 15px;
+
+    font-size: 3rem;
+}
+
+.home-featured-placeholder h3 {
+    margin: 0 0 8px;
+
+    color: var(--azul-profundo);
+
+    font-size: 1.5rem;
+}
+
+.home-featured-placeholder p {
+    max-width: 500px;
+
+    margin: 0 auto 25px;
+
+    color: var(--gris-texto);
+
+    line-height: 1.6;
+}
+
+/* ================================
+   CTA
+================================ */
+
+.home-cta {
+    max-width: 1200px;
+
+    margin: 20px auto 70px;
+
+    padding: 40px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+
+    background: var(--azul-profundo);
+
+    border-radius: 18px;
+
+    color: var(--blanco);
+}
+
+.home-cta > div {
+    max-width: 700px;
+}
+
+.home-cta span {
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+
+    opacity: 0.75;
+}
+
+.home-cta h2 {
+    margin: 8px 0;
+
+    font-size: 2rem;
+}
+
+.home-cta p {
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.75);
+
+    line-height: 1.6;
+}
+
+.home-cta-button {
+    flex-shrink: 0;
+
+    background: var(--blanco);
+    color: var(--azul-profundo);
+}
+
+.home-cta-button:hover {
+    background: var(--azul-claro);
+
+    transform: translateY(-2px);
+}
+
+/* ================================
+   TABLET
+================================ */
+
+@media (max-width: 850px) {
+
+    .home-hero {
+        grid-template-columns: 1fr;
+
+        padding-top: 55px;
+    }
+
+    .home-hero-decoration {
+        min-height: 350px;
+    }
+
+    .home-about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .home-cta {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+}
+
+/* ================================
+   CELULAR
+================================ */
+
+@media (max-width: 600px) {
+
+    .home-hero {
+        padding:
+            40px 16px
+            20px;
+    }
+
+    .home-hero h1 {
+        font-size: 2.6rem;
+        letter-spacing: -1px;
+    }
+
+    .home-hero p {
+        font-size: 1rem;
+    }
+
+    .home-hero-actions {
+        flex-direction: column;
+    }
+
+    .home-primary-button,
+    .home-secondary-button {
+        width: 100%;
+    }
+
+    .home-hero-decoration {
+        min-height: 300px;
+    }
+
+    .hero-circle-one {
+        width: 280px;
+        height: 280px;
+    }
+
+    .hero-circle-two {
+        width: 210px;
+        height: 210px;
+    }
+
+    .hero-product-placeholder {
+        width: 210px;
+        height: 250px;
+    }
+
+    .home-about,
+    .home-featured {
+        padding:
+            55px 16px;
+    }
+
+    .home-section-title h2 {
+        font-size: 1.9rem;
+    }
+
+    .home-cta {
+        flex-direction: column;
+        align-items: flex-start;
+
+        margin:
+            10px 16px 50px;
+
+        padding: 30px 25px;
+    }
+
+    .home-cta h2 {
+        font-size: 1.6rem;
+    }
+
+    .home-cta-button {
+        width: 100%;
+    }
+
+}
