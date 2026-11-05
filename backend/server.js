@@ -1,3 +1,4 @@
+
 const express = require("express");
 const cors = require("cors");
 require("dotenv").config();
@@ -8,36 +9,36 @@ const jwt = require("jsonwebtoken");
 const prisma = require("./src/lib/prisma");
 
 const categoryRoutes = require("./src/routes/categoryRoutes");
-
 const productRoutes = require("./src/routes/productRoutes");
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-const cors = require("cors");
-
+// Configuración CORS
 app.use(cors({
     origin: [
-        "https://mgraphix.netlify.app/"
+        "https://mgraphix.netlify.app",
+        "http://localhost:5173"
     ],
     methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
     allowedHeaders: ["Content-Type", "Authorization"]
 }));
+
+// Middleware
 app.use(express.json());
 
-app.use("/api/categories", categoryRoutes);
-app.use("/api/products", productRoutes);
-
+// Ruta principal
 app.get("/", (req, res) => {
     res.json({
-        message: "Backend de la tienda funcionando correctamente" 
+        message: "Backend de la tienda funcionando correctamente"
     });
 });
 
-app.listen(PORT, () => {
-    console.log(`Servidor ejecutándose en http://localhost:${PORT}`);
-});
+// Rutas de categorías y productos
+app.use("/api/categories", categoryRoutes);
+app.use("/api/products", productRoutes);
 
+// Autenticación del administrador
 app.post("/api/auth/login", async (req, res) => {
     try {
         const { username, password } = req.body;
@@ -88,10 +89,15 @@ app.post("/api/auth/login", async (req, res) => {
         });
 
     } catch (error) {
-        console.error(error);
+        console.error("Error en login:", error);
 
         res.status(500).json({
             error: "Error interno del servidor"
         });
     }
+});
+
+// Iniciar servidor
+app.listen(PORT, "0.0.0.0", () => {
+    console.log(`Servidor ejecutándose en el puerto ${PORT}`);
 });
