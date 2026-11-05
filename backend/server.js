@@ -14,7 +14,15 @@ const productRoutes = require("./src/routes/productRoutes");
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-app.use(cors());
+const cors = require("cors");
+
+app.use(cors({
+    origin: [
+        "https://mgraphix.netlify.app/"
+    ],
+    methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
+    allowedHeaders: ["Content-Type", "Authorization"]
+}));
 app.use(express.json());
 
 app.use("/api/categories", categoryRoutes);
