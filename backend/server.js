@@ -22,7 +22,7 @@ app.use("/api/products", productRoutes);
 
 app.get("/", (req, res) => {
     res.json({
-        message: "Backend de la tienda funcionando correctamente"
+        message: "Backend de la tienda funcionando correctamente" 
     });
 });
 
