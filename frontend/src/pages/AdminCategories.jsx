@@ -1,6 +1,8 @@
+
 import { useEffect, useState } from "react";
 import "/styles/adminCategories.css";
 import AdminBackButton from "../components/AdminBackButton";
+import API_URL from "../api";
 
 function AdminCategories() {
 
@@ -18,7 +20,7 @@ function AdminCategories() {
         try {
 
             const response = await fetch(
-                "http://localhost:3000/api/categories"
+                `${API_URL}/api/categories`
             );
 
             const data = await response.json();
@@ -50,8 +52,8 @@ function AdminCategories() {
         try {
 
             const url = editingId
-                ? `http://localhost:3000/api/categories/${editingId}`
-                : "http://localhost:3000/api/categories";
+                ? `${API_URL}/api/categories/${editingId}`
+                : `${API_URL}/api/categories`;
 
             const method = editingId
                 ? "PUT"
@@ -122,7 +124,7 @@ function AdminCategories() {
             const token = localStorage.getItem("token");
 
             const response = await fetch(
-                `http://localhost:3000/api/categories/${category.id}/status`,
+                `${API_URL}/api/categories/${category.id}/status`,
                 {
                     method: "PATCH",
                     headers: {
@@ -172,7 +174,6 @@ function AdminCategories() {
 
     return (
 
-
         <main className="admin-categories-page">
 
             <AdminBackButton />
@@ -183,8 +184,6 @@ function AdminCategories() {
                     <span>
                         GESTIÓN DE LA TIENDA
                     </span>
-
-                     
 
                     <h1>
                         Administración de categorías

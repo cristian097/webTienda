@@ -1,6 +1,8 @@
+
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "/styles/login.css";
+import API_URL from "../api";
 
 function Login() {
     const navigate = useNavigate();
@@ -19,7 +21,7 @@ function Login() {
 
         try {
             const response = await fetch(
-                "http://localhost:3000/api/auth/login",
+                `${API_URL}/api/auth/login`,
                 {
                     method: "POST",
                     headers: {
@@ -85,7 +87,6 @@ function Login() {
                     </p>
                 </div>
 
-
                 <form
                     className="login-form"
                     onSubmit={handleSubmit}
@@ -109,7 +110,6 @@ function Login() {
                         />
                     </div>
 
-
                     <div className="login-form-group">
                         <label htmlFor="password">
                             Contraseña
@@ -128,7 +128,6 @@ function Login() {
                         />
                     </div>
 
-
                     {error && (
                         <div className="login-error">
                             <span>!</span>
@@ -137,7 +136,6 @@ function Login() {
                             </p>
                         </div>
                     )}
-
 
                     <button
                         type="submit"
@@ -150,7 +148,6 @@ function Login() {
                     </button>
 
                 </form>
-
 
                 <div className="login-security">
                     <span>🔒</span>
