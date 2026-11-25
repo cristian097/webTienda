@@ -53,7 +53,7 @@ function Company() {
                     </p>
 
                     <p>
-                        ENos dedicamos a la comercialización de una amplia variedad de productos que acompañan diferentes momentos de la vida, desde artículos para el cuidado y bienestar de pequeñas mascotas hasta elementos decorativos para el hogar, adornos navideños, productos para celebraciones y muchas otras opciones pensadas para satisfacer las necesidades y preferencias de nuestros clientes.
+                        Nos dedicamos a la comercialización de una amplia variedad de productos que acompañan diferentes momentos de la vida, desde artículos para el cuidado y bienestar de pequeñas mascotas hasta elementos decorativos para el hogar, adornos navideños, productos para celebraciones y muchas otras opciones pensadas para satisfacer las necesidades y preferencias de nuestros clientes.
                     </p>
 
                     <p>
